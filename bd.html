@@ -1,0 +1,199 @@
+﻿<html>
+<head>
+	
+
+	<style>
+		html {
+			max-width: 99.9%;
+		}
+
+		#title {
+			font-family: calibri;
+			font-size: 100px;
+			color: yellow;
+			-webkit-text-stroke: 2px black;
+			text-shadow: 2px 2px grey;
+			height: 100px;
+		}
+
+		body {
+			direction: rtl;
+			text-align: center;
+			background-color: #BDE0FE;
+			margin: 1px;
+			border: 6px solid pink;
+			border-image: repeating-linear-gradient( 45deg, #BDE0FE, #BDE0FE 1%, #75BCFF 1%, #75BCFF 5%) 10;
+		}
+
+		h1:before {
+			content: 'מזל טוב לאמא היקרה!';
+			animation-name: head;
+			animation-duration: 10s;
+			animation-iteration-count: infinite;
+		}
+
+		@keyframes head {
+			0% {
+				font-size: 100%;
+				opacity: 1;
+				color: yellow;
+				content: "מזל טוב לאמא היקרה!"
+			}
+
+			10% {
+				font-size: 50%;
+				opacity: 0;
+			}
+
+			24% {
+				font-size: 100%;
+				opacity: 1;
+				color: blue;
+				content: "עד מאה ועשרים שנה"
+			}
+
+			34% {
+				font-size: 50%;
+				opacity: 0;
+			}
+
+			48% {
+				font-size: 100%;
+				opacity: 1;
+				color: red;
+				content: "יום הולדת שמח"
+			}
+
+			58% {
+				font-size: 50%;
+				opacity: 0;
+			}
+
+			72% {
+				font-size: 100%;
+				opacity: 1;
+				color: green;
+				content: "אושר, עושר והרבה בריאות!"
+			}
+
+			82% {
+				font-size: 50%;
+				opacity: 0;
+			}
+
+			96% {
+				font-size: 100%;
+				opacity: 1;
+				content: "מזל טוב לאמא היקרה!"
+			}
+		}
+
+		.greeting {
+			width: 87%;
+			color: red;
+			text-align: right;
+			padding: 2px;
+			font-family: Calibri;
+			font-size: 25px;
+			margin-right: 12px;
+		}
+
+		h3:hover {
+			animation-name: h3;
+			animation-duration: 1.5s;
+		}
+
+		@keyframes h3 {
+			0% {
+			}
+
+			25% {
+				font-size: 31px;
+			}
+
+			100% {
+				font-size: 29.3px;
+			}
+		}
+
+		img {
+			display: block;
+			position: fixed;
+			left: 0px;
+			top: 5%;
+			z-index: 100001;
+			width: 34px;
+			padding: 0;
+			cursor: pointer;
+		}
+
+		#if {
+			right: 30px;
+			top: 7%;
+		}
+        #cake {
+            right: 60px;
+            top: 75%;
+			width:250px;
+        }
+		h3 {
+			-webkit-text-stroke: 0.5px black;
+			font-size: 30px;
+		}
+	</style>
+</head>
+<body>
+
+	<h1 id="title">
+	</h1>
+	<div class="greeting">
+		<h2>
+			לאמא היקרה,
+		</h2>
+		<h3 style="color: #6A040F">
+			את האמא הכי טובה בעולם, אין כמוך ואנחנו התברכנו בכך שזכינו בך!
+		</h3>
+		<h3 style="color: #E85D04">
+			אף אמא אחרת לא תוכל להחליף אותך ולהעניק אהבה כמו שאת מעניקה לנו.
+		</h3>
+		<h3 style="color: #ff006e">
+			אנחנו מאחלים לך שפע של אושר, עושר, בריאות, שמחה ושכל משאלותיך יתגשמו במהרה.
+		</h3>
+		<h4 style="margin-right: 650px; color: #3c096c; ">
+			מסבא, סבתא, אבא, עמיחי, לביא, ארז, יקיר ושגיא
+		</h4>
+	</div>
+	<img src="https://i.pinimg.com/originals/d4/c8/c7/d4c8c71128a2925d47e81a67e2bf2b8c.gif" style="width:200px;" />
+	<img src="image/if.png" style="width:100px;" id="if" />
+
+	<script src="https://www.wpromotions.eu/confetti.min.js"></script>
+	<script>
+        confetti.start()
+		var open = true;
+		function start() {
+			if (open) {
+                document.getElementById("stop").src = "https://cdn-icons-png.flaticon.com/512/189/189638.png";
+                setTimeout(function () { confetti.stop(); }, 20)
+				open = false;
+			}
+			else {
+				confetti.start()
+				open = true;
+                document.getElementById("stop").src = "https://cdn-icons-png.flaticon.com/512/189/189639.png";
+            }
+		}
+        
+	</script>
+	
+	<embed src="image/bs2.mp3" width="69" height="50" loop="true" hidden="" style="background-color: blue; display:block; position: fixed; left: 30px; top: 90%; color:green"	 />
+	<img src="image/cake.jpg" style="" id="cake" />
+	<img src="https://i.gifer.com/YKq1.gif" style="top:35%; left:-5px; width:200px;" id="explow" />
+	<img src="https://cdn-icons-png.flaticon.com/512/189/189639.png" style="top:90%; left:120px; width:50px;" id="stop" onclick="start()"/>
+<script>
+	if (screen.width < 1300) {
+		document.getElementById("cake").style.position = "unset";
+		document.getElementById("explow").style.position = "unset";
+    }
+</script>
+</body>
+</html>
